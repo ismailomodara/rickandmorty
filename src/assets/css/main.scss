@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400700&display=swap');
+
+:root {
+  --primary: #0e830d;
+  --black: #010a01;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Comfortaa', sans-serif;
+  scroll-behavior: smooth;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #e1fce1;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  font-family: "Comfortaa", sans-serif;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0
+}
+
+.app {
+  padding: 40px;
+  background: #e1fce1;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #fafafe;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

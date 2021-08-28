@@ -1,0 +1,126 @@
+.character-card {
+  position: relative;
+  top: 0;
+  height: 360px;
+  width: 260px;
+  border-radius: 20px;
+  background: #ffffff;
+  padding: 25px 20px;
+  box-shadow: -10px 15px 30px rgba(9, 4, 21, 0.08);
+  border: 3px solid transparent;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    top: -10px;
+    border-color: var(--primary);
+    box-shadow: -10px 15px 30px rgba(9, 4, 21, 0.2);
+    transition: all 0.3s ease-out;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 5px;
+
+    span {
+      color: var(--primary);
+      font-weight: 700;
+    }
+  }
+
+  &__status {
+    position: relative;
+    padding: 8px 10px 8px 22px;
+    border-radius: 100px;
+    font-size: 13px;
+    background: rgba(244, 5, 41, 0.2);
+    color: rgb(244, 5, 41);
+
+    &::before {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      content: '';
+      height: 7px;
+      width: 6px;
+      display: block;
+      border-radius: 1000px;
+      background: rgb(244, 5, 41);
+    }
+
+    &.alive {
+      background: #0e830d20;
+      color: #0e830d;
+
+      &::before {
+        background: rgb(3, 168, 78);
+      }
+    }
+  }
+
+  &__location {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    opacity: 0.5;
+    color: var(--black);
+
+    svg {
+      height: 16px;
+      width: auto;
+      margin-right: 5px;
+    }
+    span {
+      font-size: 12px;
+      font-weight: 700;
+    }
+  }
+
+  &__state {
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
+    cursor: pointer;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 36px;
+      width: 36px;
+      border-radius: 100%;
+      background: var(--primary);
+
+      svg {
+        height: 16px;
+        position: relative;
+        left: 0;
+        transition: left 0.3s ease-in;
+      }
+
+      &:hover svg {
+        left: 3px;
+        transition: left 0.3s ease-out;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: -30px;
+    bottom: -30px;
+    height: 220px;
+    width: 220px;
+    border-radius: 100%;
+    border: 4px solid var(--primary);
+
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 100%;
+      object-fit: cover;
+    }
+  }
+}

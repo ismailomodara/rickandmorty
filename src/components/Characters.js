@@ -1,22 +1,30 @@
-import '../assets/css/characters.scss';
+import { useState, useEffect } from 'react';
+
 import Character from "../components/Character";
 import CharacterLoading from "./CharacterLoading";
 
 const Characters = () => {
-    const loading = false;
-    const dummyLength = [1, 2, 3, 4, 5, 6, 7, 8];
-    const images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    const [loading, setLoading] = useState(true);
+    const [characters, setCharacters] = useState([]);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setCharacters([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+            setLoading(false);
+        }, 3000)
+
+    }, []);
 
     return (
         <div className="characters">
             {
                 loading ?
-                    dummyLength.map((image, key) => {
-                        return <CharacterLoading key={key} />
-                    }) :
-
-                    images.map((image, key) => {
-                        return <Character key={key} image={image} />
+                    Array.from(Array(8), (number, i) => {
+                        return <CharacterLoading key={i} />
+                    })
+                    :
+                    characters.map((character, key) => {
+                        return <Character key={key} image={character} />
                     })
             }
         </div>

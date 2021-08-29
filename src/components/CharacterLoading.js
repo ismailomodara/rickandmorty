@@ -8,7 +8,7 @@ const CharacterLoading = () => {
             <div />
             <div />
         </div>
-    );
+    )
 }
 
 export default CharacterLoading;

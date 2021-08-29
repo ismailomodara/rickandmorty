@@ -1,12 +1,12 @@
 
-const CharacterCard = (props) => {
+const Character = (props) => {
     const image = `https://rickandmortyapi.com/api/character/avatar/${props.image}.jpeg`;
 
     return (
-        <div className="character-card">
-            <h6 className="character-card__name">Rick <span>Sanchez</span></h6>
-            <span className="character-card__status alive">Alive</span>
-            <div className="character-card__location">
+        <div className="character">
+            <h6 className="character__name">Rick <span>Sanchez</span></h6>
+            <span className="character__status alive">Alive</span>
+            <div className="character__location">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                      stroke="#031e03" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
                      className="feather feather-map-pin">
@@ -15,7 +15,7 @@ const CharacterCard = (props) => {
                 </svg>
                 <span>Earth</span>
             </div>
-            <div className="character-card__state">
+            <div className="character__state">
                     <span>
                         <svg
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -26,11 +26,11 @@ const CharacterCard = (props) => {
                         </svg>
                     </span>
             </div>
-            <div className="character-card__image">
+            <div className="character__image">
                 <img src={image} alt="Rick" />
             </div>
         </div>
     );
 }
 
-export default CharacterCard;
+export default Character;

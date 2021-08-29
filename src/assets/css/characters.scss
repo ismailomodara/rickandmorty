@@ -144,6 +144,50 @@
       transition: filter 0.3s ease-in;
     }
   }
+
+  &.loading {
+    position: relative;
+
+    div {
+      background: #f3f3f3;
+      height: 15px;
+      width: 70px;
+    }
+
+    div:first-child {
+      width: 140px;
+      margin-bottom: 10px;
+    }
+
+    div:nth-child(2) {
+      margin-bottom: 10px;
+      border-radius: 100px;
+    }
+
+    div:nth-child(3) {
+      width: 50px;
+    }
+
+    div:nth-child(4) {
+      position: absolute;
+      left: 15px;
+      bottom: 20px;
+      height: 36px;
+      width: 36px;
+      border-radius: 100%;
+    }
+
+    div:last-child {
+      position: absolute;
+      right: -35px;
+      bottom: -35px;
+      height: 230px;
+      width: 230px;
+      border-radius: 100%;
+    }
+
+
+  }
 }
 
 @media (max-width: 600px) {

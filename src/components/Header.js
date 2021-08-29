@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <div className="header">
             <div className="search">
-                <input type="text" placeholder="Search for character" />
+                <input type="text" placeholder="Search for a character" />
                 <button><span>Search</span></button>
             </div>
             <h1 className="header__title">50 Characters</h1>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
 
 :root {
   --primary: #0e830d;
@@ -38,12 +38,18 @@ p, h1, h2, h3, h4, h5, h6 {
   background: #e1fce1;
   min-height: 100vh;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: scroll;
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
+  > div {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    margin: auto;
+  }
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

@@ -1,10 +1,9 @@
-import CharacterCard from "../components/CharacterCard";
+import Characters from "../components/Characters";
 
 const Home = () => {
     return (
         <div className="home">
-            <CharacterCard />
-            <CharacterCard />
+            <Characters />
         </div>
     );
 }

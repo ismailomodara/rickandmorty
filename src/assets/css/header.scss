@@ -13,6 +13,7 @@
   height: 55px;
   display: flex;
   align-items: center;
+  position: relative;
 
   input {
     height: 100%;
@@ -43,6 +44,17 @@
     }
   }
 
+  span {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+
+    img {
+      height: 24px;
+      width: auto;
+    }
+  }
+
   button {
     margin-left: 10px;
     height: 100%;
@@ -67,5 +79,30 @@
       top: -5px;
       transition: all 0.3s ease-in;
     }
+  }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .search span {
+    animation: spin infinite 1.5s linear;
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

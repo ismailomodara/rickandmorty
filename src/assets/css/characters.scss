@@ -131,6 +131,10 @@
 
   &:nth-child(2n + 1) {
     margin-top: 100px;
+
+    .character__image {
+      border-color: yellow;
+    }
   }
 
   &:hover {
@@ -214,21 +218,17 @@
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
-    top: 20px;
   }
   100% {
     opacity: 1;
-    top: 0;
   }
 }
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    top: 20px;
   }
   100% {
     opacity: 1;
-    top: 0;
   }
 }

@@ -3,11 +3,7 @@ import { useState, useEffect } from 'react';
 import Character from "../components/Character";
 import CharacterLoading from "./CharacterLoading";
 
-const getCharacters = () => {
-
-}
-
-const Characters = (props) => {
+const Characters = () => {
     const [loading, setLoading] = useState(true);
     const [characters, setCharacters] = useState([]);
 

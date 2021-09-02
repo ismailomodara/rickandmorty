@@ -1,15 +1,28 @@
-import { useState} from 'react';
+import { useState, useEffect } from 'react';
 
 import Header from "../components/Header";
 import Characters from "../components/Characters";
+import {getCharacters} from "../services";
 
 const Home = () => {
-    const [query, setQuery] = useState('');
+    const [loading, setLoading] = useState(true);
+    const [queryName, setQueryName] = useState('');
+    const [characters, setCharacters] = useState([]);
+
+    useEffect( () => {
+        setLoading(true);
+        getCharacters({ page: 1, filterName: queryName }).then(response => {
+            if(!response.loading) {
+                setCharacters(response.data.characters.results)
+                setLoading(false)
+            }
+        }).catch(error => console.log(error))
+    }, [queryName]);
 
     return (
         <div className="home">
-            <Header setQuery={(query) => setQuery(query)} />
-            <Characters query={query} />
+            <Header loading={loading} setQuery={setQueryName} />
+            <Characters characters={characters} loading={loading} />
         </div>
     );
 }

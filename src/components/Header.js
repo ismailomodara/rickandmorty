@@ -1,27 +1,17 @@
-import { useState, useCallback } from 'react';
-import loading from "../assets/img/loading.svg"
+import  loadingIcon from "../assets/img/loading.svg"
 
-const Header = (props) => {
-    const [query, setQuery] = useState('');
-
-    const emitQuery = () => {
-        props.setQuery(query)
-    }
-
-    useCallback(() => {
-        emitQuery();
-    }, [query])
-
+const Header = ({setQuery, loading}) => {
     return (
         <div className="header">
             <div className="search">
                 <input
                     type="text"
                     placeholder="Search for a character"
-                    onChange={(event) => setQuery(event.target.value)} />
-                { query ? <span><img src={loading} alt="O" /> </span> : ''}
+                    onInput={(event) =>{
+                        setQuery(event.target.value)
+                    }} />
+                { loading && <span><img src={loadingIcon} alt="O" /> </span>}
             </div>
-            <h1 className="header__title">50 Characters</h1>
         </div>
     );
 }

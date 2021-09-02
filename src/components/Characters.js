@@ -1,20 +1,7 @@
-import { useState, useEffect } from 'react';
-
 import Character from "../components/Character";
 import CharacterLoading from "./CharacterLoading";
 
-const Characters = () => {
-    const [loading, setLoading] = useState(true);
-    const [characters, setCharacters] = useState([]);
-
-    useEffect(() => {
-        setTimeout(() => {
-            setCharacters([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
-            setLoading(false);
-        }, 3000)
-
-    }, []);
-
+const Characters = ({loading, characters}) => {
     return (
         <div className="characters">
             {
@@ -24,7 +11,7 @@ const Characters = () => {
                     })
                     :
                     characters.map((character, key) => {
-                        return <Character key={key} image={character} />
+                        return <Character key={key} character={character} />
                     })
             }
         </div>

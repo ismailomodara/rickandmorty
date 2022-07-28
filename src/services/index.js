@@ -18,11 +18,10 @@ export const client = new ApolloClient({
 });
 
 export const getCharacters = (query) => {
-console.log(query)
     return client.query({
         query:
             gql`
-                query characters($page: Int, $filterName: String ) {
+                query characters($page: Int, $filterName: String) {
                     characters(page: $page, filter: { name: $filterName }){
                         results {
                           name,

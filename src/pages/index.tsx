@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 
 import Header from "../components/Header";
 import Characters from "../components/Characters";
-import {getCharacters} from "../services";
+import { getCharacters } from "../services";
 
 const Home = () => {
-    const [loading, setLoading] = useState(true);
-    const [queryName, setQueryName] = useState('');
-    const [characters, setCharacters] = useState([]);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [queryName, setQueryName] = useState<string>('');
+    const [characters, setCharacters] = useState<[]>([]);
 
     useEffect( () => {
         setLoading(true);

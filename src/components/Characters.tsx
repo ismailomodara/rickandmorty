@@ -1,7 +1,14 @@
+import React from "react";
+
 import Character from "../components/Character";
 import CharacterLoading from "./CharacterLoading";
 
-const Characters = ({loading, characters}) => {
+interface CharactersInterface {
+    loading: boolean;
+    characters: []
+}
+
+const Characters: React.FC<CharactersInterface> = ({ loading, characters  }) => {
     return (
         <div className="characters">
             {
@@ -10,7 +17,7 @@ const Characters = ({loading, characters}) => {
                         return <CharacterLoading key={i} />
                     })
                     :
-                    characters.map((character, key) => {
+                    characters.map((character: any, key: number) => {
                         return <Character key={key} character={character} />
                     })
             }

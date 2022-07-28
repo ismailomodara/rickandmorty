@@ -1,5 +1,17 @@
+import React from "react";
 
-const Character = ({ character }) => {
+interface CharacterInterface {
+    character: {
+        name: string;
+        status: string;
+        origin: {
+            name: string
+        };
+        image: string
+    }
+}
+
+const Character: React.FC<CharacterInterface> = ({ character }) => {
     const { name, status, origin, image } = character;
 
     return (

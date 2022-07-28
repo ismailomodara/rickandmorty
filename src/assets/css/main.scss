@@ -6,6 +6,7 @@
 :root {
   --primary: #0e830d;
   --black: #010a01;
+  --bg: #e1fce1
 }
 
 * {
@@ -24,7 +25,7 @@ html, body {
 }
 
 body {
-  background: #e1fce1;
+  background: var(--bg);
   font-size: 18px;
   line-height: 1.6;
   margin: 0;
